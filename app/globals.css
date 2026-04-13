@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fdfbff;
+  --foreground: #1a1a2e;
+  
+  /* LilShield Palette - Apple/Stripe inspired */
+  --primary: #7c4dff;
+  --secondary: #64b5f6;
+  --accent: #b39ddb;
+  --muted: #f3f0ff;
+  
+  --card: #ffffff;
+  --card-foreground: #1a1a2e;
+  
+  --border: rgba(0, 0, 0, 0.08);
+  --input: rgba(0, 0, 0, 0.05);
+  
+  --ray-color: rgba(100, 181, 246, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.parallax-container {
+  perspective: 1000px;
+}
+
+.ray-hit {
+  box-shadow: 0 0 30px var(--ray-color);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
