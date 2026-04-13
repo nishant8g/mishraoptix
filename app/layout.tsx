@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://mishraoptix.vercel.app'), // Matches your GitHub repo name!
+  metadataBase: new URL('https://mishoptix.vercel.app'), // We'll name the Vercel project MishOptix
   title: 'MishOptix | Premium Blue-Light Eye Protection for Kids',
   description: 'Protect your child\'s eyes with MishOptix. Doctor-backed blue-light glasses for ages 0-14. Zero yellow tint, 99.9% protection.',
   keywords: 'kids blue light glasses, children eyewear, computer glasses for kids, MishOptix, screen protection',
